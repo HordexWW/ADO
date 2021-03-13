@@ -11,6 +11,7 @@ namespace ADOTask1
     {
         static void Main(string[] args)
         {
+            //менеджер для работы с объектами
             TriangleManager triangleManager = new TriangleManager();
 
             //точки на одной линии
