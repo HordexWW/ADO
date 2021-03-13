@@ -30,6 +30,22 @@ namespace ADOTask1
 
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
+        public static bool IfOntheLine(Point a, Point b, Point c)
+        {
+            if ((c.X - a.X) / (b.X - a.X) == (c.Y - a.Y) / (b.Y - a.Y))
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool IfOntheLine(double ax, double ay, double bx, double by, double cx, double cy)
+        {
+            if ((cx - ax) / (bx - ax) == (cy - ay) / (by - ay))
+            {
+                return false;
+            }
+            return true;
+        }
         public override string ToString()
         {
             return $"({this.x}; {this.y})";
