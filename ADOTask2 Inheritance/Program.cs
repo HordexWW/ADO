@@ -11,9 +11,25 @@ namespace ADOTask2_Inheritance
     {
         static void Main(string[] args)
         {
-            Man man = new Man("John", 18, 180, 80);
 
-            Console.WriteLine(man);
+            try
+            {
+                Man man = new Man("awda", 18, 180, 80);
+                Student student = new Student("st1", 20, 170, 70, -2018, 3, 341);
+
+                Console.WriteLine(man);
+                Console.WriteLine(student);
+            }
+            catch( ArgumentException ae)
+            {
+                Console.WriteLine(ae.Message);
+            }
+            finally
+            {
+                Console.ReadKey();
+            }
+
+
         }
     }
 }

@@ -15,6 +15,11 @@ namespace ADOTask2_Inheritance.Task2._1.entity
 
         public Man(string name, int age, double height, double weight)
         {
+            if (name == null || name == "") throw new ArgumentException("Имя не должно быть пустым!");
+            if (age < 0) throw new ArgumentException("Возраст должен быть больше нуля!");
+            if (height < 0) throw new ArgumentException("Рост должен быть больше нуля!");
+            if (weight < 0) throw new ArgumentException("Вес должен быть больше нуля!");
+
             this.name = name;
             this.age = age;
             this.height = height;

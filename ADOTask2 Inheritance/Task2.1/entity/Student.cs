@@ -15,6 +15,10 @@ namespace ADOTask2_Inheritance.Task2._1.entity
         public Student(string name, int age, double height, double weight, int yearOfAdmission, int course, int group)
             : base(name, age, height, weight)
         {
+            if (yearOfAdmission < 0) throw new ArgumentException("Год поступления должен быть больше нуля!");
+            if (course < 0) throw new ArgumentException("Курс должен быть больше нуля!");
+            if (group < 0) throw new ArgumentException("Номер группы должен быть больше нуля!");
+
             this.yearOfAdmission = yearOfAdmission;
             this.course = course;
             this.group = group;
@@ -40,7 +44,14 @@ namespace ADOTask2_Inheritance.Task2._1.entity
 
         public override string ToString()
         {
-            return base.ToString();
+            return " Man {name = \'" + this.Name + "\'" +
+                ", age = " + this.Age +
+                ", height = " + this.Height +
+                ", weight = " + this.Weight + 
+                ", year of admission = " + this.yearOfAdmission +
+                ", course = " + this.course +
+                ", group = " + this.group +
+                "}";
         }
     }
 }
