@@ -29,25 +29,41 @@ namespace ADOTask2_Inheritance.Task2._1.entity
         public string Name
         {
             get => this.name;
-            set => this.name = value;
+            set
+            {
+                if (value == null || value == "") throw new ArgumentException("Имя не должно быть пустым!");
+                this.name = value;
+            }
         }
 
         public int Age
         {
             get => this.age;
-            set => this.age = value;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Возраст должен быть больше нуля!");
+                this.age = value;
+            }
         } 
 
         public double Height
         {
             get => this.height;
-            set => this.height = value;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Рост должен быть больше нуля!");
+                this.height = value;
+            }
         }
 
         public double Weight
         {
             get => this.weight;
-            set => this.weight = value;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Вес должен быть больше нуля!");
+                this.weight = value;
+            }
         }
 
         public override string ToString()

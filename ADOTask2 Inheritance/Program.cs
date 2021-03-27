@@ -15,10 +15,12 @@ namespace ADOTask2_Inheritance
             try
             {
                 Man man = new Man("awda", 18, 180, 80);
-                Student student = new Student("st1", 20, 170, 70, -2018, 3, 341);
+                Student student = new Student("student", 20, 170, 70, 2018, 3, 341);
 
                 Console.WriteLine(man);
                 Console.WriteLine(student);
+
+                student.Age = -100;
             }
             catch( ArgumentException ae)
             {

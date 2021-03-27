@@ -27,19 +27,31 @@ namespace ADOTask2_Inheritance.Task2._1.entity
         public int YearOfAdmission
         {
             get => this.yearOfAdmission;
-            set => this.yearOfAdmission = value;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Год поступления должен быть больше нуля!");
+                this.yearOfAdmission = value;
+            }
         }
 
         public int Course
         {
             get => this.course;
-            set => this.course = value;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Курс должен быть больше нуля!");
+                this.course = value;
+            }
         }
 
         public int Group
         {
             get => this.group;
-            set => this.group = value;
+            set
+            {
+                if (value< 0) throw new ArgumentException("Номер группы должен быть больше нуля!");
+                this.course = value;
+            }
         }
 
         public override string ToString()
