@@ -16,7 +16,7 @@ namespace ADOTask2_Inheritance.Task2._1.entity
             : base(name, age, height, weight)
         {
             if (yearOfAdmission < 0) throw new ArgumentException("Год поступления должен быть больше нуля!");
-            if (course < 0) throw new ArgumentException("Курс должен быть больше нуля!");
+            if (course < 0) throw new ArgumentException("Номер Курса должен быть больше нуля!");
             if (group < 0) throw new ArgumentException("Номер группы должен быть больше нуля!");
 
             this.yearOfAdmission = yearOfAdmission;
@@ -39,7 +39,7 @@ namespace ADOTask2_Inheritance.Task2._1.entity
             get => this.course;
             set
             {
-                if (value < 0) throw new ArgumentException("Курс должен быть больше нуля!");
+                if (value < 0) throw new ArgumentException("Номер курса должен быть больше нуля!");
                 this.course = value;
             }
         }
@@ -56,7 +56,7 @@ namespace ADOTask2_Inheritance.Task2._1.entity
 
         public override string ToString()
         {
-            return " Man {name = \'" + this.Name + "\'" +
+            return "\nMan {name = \'" + this.Name + "\'" +
                 ", age = " + this.Age +
                 ", height = " + this.Height +
                 ", weight = " + this.Weight + 

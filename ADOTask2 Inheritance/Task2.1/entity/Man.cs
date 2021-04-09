@@ -68,7 +68,7 @@ namespace ADOTask2_Inheritance.Task2._1.entity
 
         public override string ToString()
         {
-            return " Man {name = \'" + this.name + "\'" + 
+            return "\nMan {name = \'" + this.name + "\'" + 
                 ", age = " + this.age + 
                 ", height = " + this.height + 
                 ", weight = " + this.weight + "}";
